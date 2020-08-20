@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+    /* TODO - table vertically in middle of the page */
+    .myDiv{
+    Width: 14%; 
+    background-color: yellow;
+    margin: auto;
+    display: flex;
+    }
+    
+    div{text-align:center;
+
+    }
+
+    
+</style>
+
+</head>
+<body>
+    <!--TODO - work on function-->
+   <div class = "myDiv">
+    
+        <table border="1" >
+    
+            <tr>
+               <td colspan="5"><input type="number" id="display" name="display" disabled></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('display').value='7'">7</button></td>
+                <td><button onclick="document.getElementById('display').value='8'">8</button></td>
+                <td><button onclick="document.getElementById('display').value='9'">9</button></td>
+                <td><button onclick="document.getElementById('display').value='%'">%</button></td>
+                <td><button onclick="document.getElementById('display').value='C'">C</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('display').value='4'">4</button></td>
+                <td><button onclick="document.getElementById('display').value='5'">5</button></td>
+                <td><button onclick="document.getElementById('display').value='6'">6</button></td>
+                <td><button onclick="document.getElementById('display').value='*'">*</button></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('display').value='1'">1</button></td>
+                <td><button onclick="document.getElementById('display').value='2'">2</button></td>
+                <td><button onclick="document.getElementById('display').value='3'">3</button></td>
+                <td><button onclick="document.getElementById('display').value='-'">-</button></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('display').value='0'">0</button></td>
+                <td><button onclick="document.getElementById('display').value='.'">.</button></td>
+                <td></td>
+                <td><button onclick="document.getElementById('display').value='+'">+</button></td>
+                <td><button onclick="document.getElementById('display').value='='">=</button></td>
+            </tr>
+
+        </table>
+   </div>
+</body>
+</html>
