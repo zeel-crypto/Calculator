@@ -31,35 +31,37 @@
                <td colspan="5"><input  type="number" id="display" name="display" disabled></td>
             </tr>
             <tr>
-            <td><button style="font-size: 75px;width: 100px;"onclick="if(opPrest==true){document.getElementById('display').value='7';}else{document.getElementById('display').value=document.getElementById('display').value+'7';}">7</button></td>
-                <td><button style="font-size: 75px; width: 100px; "onclick="document.getElementById('display').value=document.getElementById('display').value+'8'">8</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value=document.getElementById('display').value+'9'">9</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="num1=document.getElementById('display').value; opPrest=true; operator='%';">%</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value='C'">C</button></td>
+            <td><button style="font-size: 75px;width: 100px; color: whitesmoke; background-color: rgb(83, 83, 83)"onclick="if(opPrest==true){document.getElementById('display').value='7';}else{document.getElementById('display').value=document.getElementById('display').value+'7';}">7</button></td>
+                <td><button style="font-size: 75px; width: 100px; color: whitesmoke; background-color: rgb(83, 83, 83) "onclick="document.getElementById('display').value=document.getElementById('display').value+'8'">8</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)"onclick="document.getElementById('display').value=document.getElementById('display').value+'9'">9</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow; background-color: rgb(83, 83, 83);" onclick="num1=document.getElementById('display').value; opPrest=true; operator='/';">/</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: orange;background-color: rgb(83, 83, 83) "onclick="document.getElementById('display').value='C'">C</button></td>
             </tr>
             <tr>
-                <td><button style="font-size: 75px;width: 100px;" onclick="document.getElementById('display').value=document.getElementById('display').value+'4'">4</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value=document.getElementById('display').value+'5'">5</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value=document.getElementById('display').value+'6'">6</button></td>
-                <td><button style="font-size: 75px;width: 100px;" onclick="num1=document.getElementById('display').value; opPrest=true; operator='*';">*</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)" onclick="document.getElementById('display').value=document.getElementById('display').value+'4'">4</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)"onclick="document.getElementById('display').value=document.getElementById('display').value+'5'">5</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)"onclick="document.getElementById('display').value=document.getElementById('display').value+'6'">6</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow;background-color: rgb(83, 83, 83)" onclick="num1=document.getElementById('display').value; opPrest=true; operator='*';">*</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow;background-color: rgb(83, 83, 83)" onclick="document.getElementById('display').value='.'">.</button></td>
                 <td></td>
                 
             </tr>
             <tr>
-                <td><button style="font-size: 75px;width: 100px;" onclick="document.getElementById('display').value=document.getElementById('display').value+'1'">1</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value=document.getElementById('display').value+'2'">2</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="document.getElementById('display').value=document.getElementById('display').value+'3'">3</button></td>
-                <td><button style="font-size: 75px;width: 100px;"onclick="num1=document.getElementById('display').value; opPrest=true; operator='-';">-</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)" onclick="document.getElementById('display').value=document.getElementById('display').value+'1'">1</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)"onclick="document.getElementById('display').value=document.getElementById('display').value+'2'">2</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)"onclick="document.getElementById('display').value=document.getElementById('display').value+'3'">3</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow; background-color: rgb(83, 83, 83)"onclick="num1=document.getElementById('display').value; opPrest=true; operator='-';">-</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow;background-color: rgb(83, 83, 83)"onclick="num1=document.getElementById('display').value; opPrest=true; operator='%';">%</button></td>
+                
                 <td></td>
                 
             </tr>
             <tr>
-                <td><button style="font-size: 75px;width: 100px;" onclick="document.getElementById('display').value=document.getElementById('display').value+'0'">0</button></td>
-                <td><button style="font-size: 75px;width: 100px;" onclick="document.getElementById('display').value='.'">.</button></td>
-                
-                <td><button style="font-size: 75px;width: 100px;" onclick="num1=document.getElementById('display').value; opPrest=true; operator='/';">/</button></td>
-                <td><button style="font-size: 75px;width: 100px;" onclick="num1=document.getElementById('display').value; opPrest=true; operator='+';">+</button></td>
-            <td><button style="font-size: 75px;width: 100px;" onclick="num2=document.getElementById('display').value;if(operator=='+')       {result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}else if(operator=='%'){result=parseInt(num1)%parseInt(num2);document.getElementById('display').value=result;}else if (operator=='*'){result=parseInt(num1)*parseInt(num2);document.getElementById('display').value=result;} else if(operator=='/'){result=parseInt(num1)/parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
+                <td><button style="font-size: 75px;width: 100px; color: whitesmoke;background-color: rgb(83, 83, 83)" onclick="document.getElementById('display').value=document.getElementById('display').value+'0'">0</button></td>
+                <td></td>
+                <td></td>
+                <td><button style="font-size: 75px;width: 100px; color: greenyellow;background-color: rgb(83, 83, 83)" onclick="num1=document.getElementById('display').value; opPrest=true; operator='+';">+</button></td>
+            <td><button style="font-size: 75px;width: 100px;color: greenyellow;background-color: rgb(83, 83, 83)" onclick="num2=document.getElementById('display').value;if(operator=='+')       {result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}else if(operator=='%'){result=parseInt(num1)%parseInt(num2);document.getElementById('display').value=result;}else if (operator=='*'){result=parseInt(num1)*parseInt(num2);document.getElementById('display').value=result;} else if(operator=='/'){result=parseInt(num1)/parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
             </tr>
 
         </table>
