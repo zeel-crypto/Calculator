@@ -49,7 +49,7 @@
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'1'">1</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'2'">2</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'3'">3</button></td>
-                <td><button onclick="document.getElementById('display').value='-'">-</button></td>
+                <td><button onclick="num1=document.getElementById('display').value; opPrest=true; operator='-';">-</button></td>
                 <td></td>
                 
             </tr>
@@ -58,7 +58,7 @@
                 <td><button onclick="document.getElementById('display').value='.'">.</button></td>
                 <td></td>
                 <td><button onclick="num1=document.getElementById('display').value; opPrest=true; operator='+';">+</button></td>
-            <td><button onclick="num2=document.getElementById('display').value;if(operator=='+'){result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
+                <td><button onclick="num2=document.getElementById('display').value;if(operator=='+'){result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
             </tr>
 
         </table>
