@@ -3,4 +3,4 @@
 
 * TODO 
 - table vertically in middle of the page
-- work on function
+- modulo pachi krvama avse
