@@ -34,14 +34,14 @@
             <td><button onclick="if(opPrest==true){document.getElementById('display').value='7';}else{document.getElementById('display').value=document.getElementById('display').value+'7';}">7</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'8'">8</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'9'">9</button></td>
-                <td><button onclick="document.getElementById('display').value='%'">%</button></td>
+                <td><button onclick="num1=document.getElementById('display').value; opPrest=true; operator='%';">%</button></td>
                 <td><button onclick="document.getElementById('display').value='C'">C</button></td>
             </tr>
             <tr>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'4'">4</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'5'">5</button></td>
                 <td><button onclick="document.getElementById('display').value=document.getElementById('display').value+'6'">6</button></td>
-                <td><button onclick="document.getElementById('display').value='*'">*</button></td>
+                <td><button onclick="num1=document.getElementById('display').value; opPrest=true; operator='*';">*</button></td>
                 <td></td>
                 
             </tr>
@@ -58,7 +58,7 @@
                 <td><button onclick="document.getElementById('display').value='.'">.</button></td>
                 <td></td>
                 <td><button onclick="num1=document.getElementById('display').value; opPrest=true; operator='+';">+</button></td>
-                <td><button onclick="num2=document.getElementById('display').value;if(operator=='+'){result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
+            <td><button onclick="num2=document.getElementById('display').value;if(operator=='+'){result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}else if(operator=='%'){result=parseInt(num1)%parseInt(num2);document.getElementById('display').value=result;}else if (operator=='*'){result=parseInt(num1)*parseInt(num2);document.getElementById('display').value=result;}">=</button></td>
             </tr>
 
         </table>
