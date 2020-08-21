@@ -1,120 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-<style>
-    
-    .myDiv{
-        width: 500px; 
+    <style>
+      .myDiv {
+        width: 500px;
         height: auto;
         background-color: black;
         margin: 0 auto;
         position: absolute;
-        top:0;
-        right:0;
+        top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        text-align:center;
-    }
-    .button{
+        text-align: center;
+      }
+      .button {
         font-size: 75px;
-        width: 100px; 
-        color: whitesmoke; 
+        width: 100px;
+        color: whitesmoke;
         background-color: rgb(83, 83, 83);
-    }
-    .button2{
-        font-size: 75px; width: 100px;  
-        color: greenyellow; 
-        background-color: rgb(83, 83, 83);
-    }
-    .button3{
+      }
+      .button2 {
         font-size: 75px;
-        width: 100px; 
+        width: 100px;
+        color: greenyellow;
+        background-color: rgb(83, 83, 83);
+      }
+      .button3 {
+        font-size: 75px;
+        width: 100px;
         color: orange;
         background-color: rgb(83, 83, 83);
-    }
-</style>
+      }
+    </style>
+  </head>
+  <body style="background-color: black;">
+    <div class="myDiv">
+      <table>
+        <tr>
+          <td colspan="5">
+            <input type="number" id="display" name="display" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td><button class="button" onclick="ifElse(7);">7</button></td>
+          <td><button class="button" onclick="ifElse(8);">8</button></td>
+          <td><button class="button" onclick="ifElse(9);">9</button></td>
+          <td><button class="button2" onclick="arithMetic('/');">/</button></td>
+          <td><button class="button3" onclick="setValue(C);">C</button></td>
+        </tr>
+        <tr>
+          <td><button class="button" onclick="ifElse(4);">4</button></td>
+          <td><button class="button" onclick="ifElse(5);">5</button></td>
+          <td><button class="button" onclick="ifElse(6);">6</button></td>
+          <td><button class="button2" onclick="arithMetic('*');">*</button></td>
+          <td><button class="button2" onclick="setValue(.);">.</button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button class="button" onclick="ifElse(1);">1</button></td>
+          <td><button class="button" onclick="ifElse(2);">2</button></td>
+          <td><button class="button" onclick="ifElse(3);">3</button></td>
+          <td><button class="button2" onclick="arithMetic('-');">-</button></td>
+          <td><button class="button2" onclick="arithMetic('%');">%</button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button class="button" onclick="ifElse(0);">0</button></td>
+          <td></td>
+          <td></td>
+          <td><button class="button2" onclick="arithMetic('+');">+</button></td>
+          <td><button class="button2" onclick="calCulate();">=</button></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var num1 = 0;
+      var num2 = 0;
+      var opPrest = false;
+      var operator = "";
+      var result = 0;
 
-</head>
-<body style="background-color: black">
-    
-   <div class = "myDiv">
-    
-        <table>
-    
-            <tr>
-               <td colspan="5"><input  type="number" id="display" name="display" disabled></td>
-            </tr>
-            <tr>
-                <td><button class="button" onclick="ifElse(7);">7</button></td>
-                <td><button class="button" onclick="ifElse(8);">8</button></td>
-                <td><button class="button" onclick="ifElse(9);">9</button></td>
-                <td><button class="button2" onclick="arithMetic('/');">/</button></td>
-                <td><button class="button3" onclick="setValue(C);">C</button></td>
-            </tr>
-            <tr>
-                <td><button class="button" onclick="ifElse(4);">4</button></td>
-                <td><button class="button" onclick="ifElse(5);">5</button></td>
-                <td><button class="button" onclick="ifElse(6);">6</button></td>
-                <td><button class="button2" onclick="arithMetic('*');">*</button></td>
-                <td><button class="button2" onclick="setValue(.);">.</button></td>
-                <td></td>
-                
-            </tr>
-            <tr>
-                <td><button class="button" onclick="ifElse(1);">1</button></td>
-                <td><button class="button" onclick="ifElse(2);">2</button></td>
-                <td><button class="button" onclick="ifElse(3);">3</button></td>
-                <td><button class="button2" onclick="arithMetic('-');">-</button></td>
-                <td><button class="button2" onclick="arithMetic('%');">%</button></td>
-                <td></td>
-                
-            </tr>
-            <tr>
-                <td><button class="button" onclick="ifElse(0);">0</button></td>
-                <td></td>
-                <td></td>
-                <td><button class="button2" onclick="arithMetic('+');">+</button></td>
-                <td><button class="button2" onclick="calCulate();">=</button></td>
-            </tr>
+      function getValue() {
+        return document.getElementById("display").value;
+      }
 
-        </table>
-   </div>
-   <script>
-       var num1=0;
-       var num2=0;
-       var opPrest = false;
-       var operator = '';
-       var result = 0;
-       
+      function setValue(value) {
+        document.getElementById("display").value = value;
+      }
 
-       function getValue() {
-            return document.getElementById('display').value;
-       }
-
-       function setValue(value) {
-            document.getElementById('display').value = value;
-       }
-
-       function appendValue(value) {
-            setValue(getValue() + value);
-       }
-       function calCulate(){
-        num2=document.getElementById('display').value;
-            if(operator=='+'){result=parseInt(num1)+parseInt(num2);document.getElementById('display').value=result;}
-                else if(operator=='-'){result=parseInt(num1)-parseInt(num2);document.getElementById('display').value=result;}
-                    else if(operator=='%'){result=parseInt(num1)%parseInt(num2);document.getElementById('display').value=result;}
-                        else if (operator=='*'){result=parseInt(num1)*parseInt(num2);document.getElementById('display').value=result;}      else if(operator=='/'){result=parseInt(num1)/parseInt(num2);document.getElementById('display').value=result;}
-       }
-       function ifElse(value){
-        if(opPrest==true){setValue(value);}else{appendValue(value);}
-       }
-       function arithMetic(opt){
-        num1=getValue(); opPrest=true; operator=opt;
-       }
-   </script>
-
-</body>
+      function appendValue(value) {
+        setValue(getValue() + value);
+      }
+      function calCulate() {
+        num2 = document.getElementById("display").value;
+        if (operator == "+") {
+          result = parseInt(num1) + parseInt(num2);
+          document.getElementById("display").value = result;
+        } else if (operator == "-") {
+          result = parseInt(num1) - parseInt(num2);
+          document.getElementById("display").value = result;
+        } else if (operator == "%") {
+          result = parseInt(num1) % parseInt(num2);
+          document.getElementById("display").value = result;
+        } else if (operator == "*") {
+          result = parseInt(num1) * parseInt(num2);
+          document.getElementById("display").value = result;
+        } else if (operator == "/") {
+          result = parseInt(num1) / parseInt(num2);
+          document.getElementById("display").value = result;
+        }
+      }
+      function ifElse(value) {
+        if (opPrest == true) {
+          setValue(value);
+        } else {
+          appendValue(value);
+        }
+      }
+      function arithMetic(opt) {
+        num1 = getValue();
+        opPrest = true;
+        operator = opt;
+      }
+    </script>
+  </body>
 </html>
