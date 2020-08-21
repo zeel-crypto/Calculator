@@ -50,7 +50,7 @@
           <td><button class="button" onclick="ifElse(8);">8</button></td>
           <td><button class="button" onclick="ifElse(9);">9</button></td>
           <td><button class="button2" onclick="arithMetic('/');">/</button></td>
-          <td><button class="button3" onclick="setValue(C);">C</button></td>
+          <td><button class="button3" onclick="setValue();">C</button></td>
         </tr>
         <tr>
           <td><button class="button" onclick="ifElse(4);">4</button></td>
@@ -78,53 +78,72 @@
       </table>
     </div>
     <script>
-      var num1 = 0;
-      var num2 = 0;
-      var opPrest = false;
-      var operator = "";
-      var result = 0;
+      var num1 = 0; //number 1
+      var num2 = 0; //number 2
+      var opPrest = false; //operator mate nu variable che
+      var operator = ""; //+-*/ operator mate
+      var result = 0; //final answer
+      var moduloPressed = false;
 
+      //input box ni value leva mate
       function getValue() {
         return document.getElementById("display").value;
       }
 
+      //input box ni value set krva
       function setValue(value) {
         document.getElementById("display").value = value;
       }
 
+      //2 value ne 3rd value sathe add krine display krvanu
       function appendValue(value) {
         setValue(getValue() + value);
       }
+
+      //= press krva pr je operation thay ana mate
       function calCulate() {
-        num2 = document.getElementById("display").value;
-        if (operator == "+") {
-          result = parseInt(num1) + parseInt(num2);
-          document.getElementById("display").value = result;
-        } else if (operator == "-") {
-          result = parseInt(num1) - parseInt(num2);
-          document.getElementById("display").value = result;
-        } else if (operator == "%") {
-          result = parseInt(num1) % parseInt(num2);
-          document.getElementById("display").value = result;
-        } else if (operator == "*") {
-          result = parseInt(num1) * parseInt(num2);
-          document.getElementById("display").value = result;
-        } else if (operator == "/") {
-          result = parseInt(num1) / parseInt(num2);
-          document.getElementById("display").value = result;
+        num2 = parseInt(getValue());
+        if (moduloPressed) {
+          num2 = num2 / 100;
         }
+        if (operator == "+") {
+          result = parseInt(num1) + num2;
+        } else if (operator == "-") {
+          result = parseInt(num1) - num2;
+        } else if (operator == "*") {
+          result = parseInt(num1) * num2;
+        } else if (operator == "/") {
+          result = parseInt(num1) / num2;
+        }
+        setValue(result);
+
+        moduloPressed = false;
+        opPrest = false;
+        num1 = 0;
+        num2 = 0;
+        operator = "";
+        result = 0;
       }
+
+      //number press kre tyare set kre
       function ifElse(value) {
         if (opPrest == true) {
           setValue(value);
+          opPrest = false;
         } else {
           appendValue(value);
         }
       }
+
+      //bdha +-*/ operations
       function arithMetic(opt) {
-        num1 = getValue();
-        opPrest = true;
-        operator = opt;
+        if (opt == "%") {
+          moduloPressed = true;
+        } else {
+          num1 = getValue();
+          opPrest = true;
+          operator = opt;
+        }
       }
     </script>
   </body>
